@@ -1,0 +1,24 @@
+# npm install --save express ejs body-parser dotenv
+express: backend framework
+ejs: view engine
+body-parser: [middleware] handler request of facebook
+dotenv: environment variables [truy vấn các file từ môi trường]
+
+# environment file
+.env: lấy các file môi trường
+.gitignore: các file không push lên github
+.babelrc: trình compiler để biên dịch mã js
+.env.example: tải lên git (file .env không tải lên git [tự làm])
+
+# cài đặt các package cho developer: npm install --save-dev @babel/core @babel/node @babel/preset-env nodemon
+
+# câu lệnh chạy dự án package.json
+"script": {"start": "nodemon --exec babel-node src/server.js"}
+
+# cấu hình project
+-- file configs/viewEngine.js định nghĩa cách thức nodejs render ra view
+
+# Test local
+curl -X GET "localhost:8080/webhook?hub.verify_token=lavanchuan&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe"
+
+# Deploy server
